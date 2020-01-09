@@ -1,6 +1,7 @@
+[![Build Status](https://travis-ci.org/dukedhx/viewer-flutter-dart.svg?branch=master)](https://travis-ci.org/dukedhx/viewer-flutter-dart)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://opensource.org/licenses/MIT)
 [![Autodesk Forge](https://img.shields.io/badge/Autodesk-Forge-orange.svg)](https://forge.autodesk.com/)
-[![Flutter](https://img.shields.io/badge/Flutter-Dart-green.svg)](https://flutter.dev/)
+[![Flutter](https://img.shields.io/badge/Flutter-Dart-blue.svg)](https://flutter.dev/)
 [![Platform](https://img.shields.io/badge/Platform-iOS|Android|Web-green.svg)](https://forge.autodesk.com/)
 
 ## Description
