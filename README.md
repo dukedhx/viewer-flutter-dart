@@ -54,7 +54,9 @@ flutter:
   assets:
       - assets/
       - assets/model/
-      #- path/to/your/model/ 
+      - path/to/your/model/
+      - path/to/your/model/subdirs
+      # ...
 ```
 
 - Verify Flutter installation and readiness: `flutter doctor`
@@ -66,6 +68,34 @@ flutter:
 
 - Run on emulators: `flutter run`
 - Build to platform targets: `flutter build ios` / `flutter build apk`
+
+# Q&A
+
+> Blank screen/WebView won't load?
+
+The Jaguar server won't resolve the serve future somehow on some oses/devices so set up a timer for the WebView to load after a few secs while the server gets started:
+
+```
+    final server = Jaguar();
+    //...
+    server.serve(); //
+
+    Timer timer = new Timer(new Duration(seconds: 5), () =>
+    flutterWebviewPlugin.launch('http://localhost:8080/',
+        rect: new Rect.fromLTWH(
+          0.0,
+          100.0,
+          MediaQuery.of(context).size.width,
+          MediaQuery.of(context).size.height - 100,
+    )));
+```
+
+Also try use the IP addr `127.0.0.1` instead of `localhost`
+
+> The `Flutter WebView plugin` won't compile?
+
+when integrating with existing projects be sure to migrate to [Androidx](https://developer.android.com/jetpack/androidx/) since it’s required by the “flutter_webview_plugin”.
+
 
 # License
 
